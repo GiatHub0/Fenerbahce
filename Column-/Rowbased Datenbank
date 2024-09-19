@@ -1,0 +1,48 @@
+Column-/Rowbased Datenbank
+Unterschiede:
+Es gibt Unterschiede in der Art und Weise, wie Daten physisch im Speicher abgelegt werden, und wie effizient sie für bestimmte Abfragen genutzt werden können.
+
+
+
+1. Datenstruktur und Speicherung
+- Zeilenbasierte Datenbank (Row-based Database):
+  - Die Daten werden zeilenweise gespeichert. Jede Zeile enthält alle Felder (Attribute) eines Datensatzes.
+  - Beispiel (Tabellenform):
+    Zeile 1: [ID, Name, Alter, Adresse]
+    Zeile 2: [ID, Name, Alter, Adresse]
+  - Einsatz: Klassische relationale Datenbanken (z.B. MySQL, PostgreSQL).
+
+- Spaltenbasierte Datenbank (Column-based Database):
+  - Die Daten werden spaltenweise gespeichert, das heißt, alle Werte einer Spalte werden zusammen abgelegt.
+  - Beispiel (Tabellenform): 
+    Spalte 1: [ID1, ID2, ID3]
+    Spalte 2: [Name1, Name2, Name3]
+    Spalte 3: [Alter1, Alter2, Alter3]
+  - Einsatz: Systeme für analytische Workloads und Data Warehousing (z.B. Apache Cassandra, Amazon Redshift, SAP HANA).
+
+2. Zugriff und Effizienz
+- Zeilenbasierte Datenbanken:
+  - Vorteilhaft für Transaktionsoperationen (OLTP), bei denen ganze Datensätze abgerufen, eingefügt oder verändert werden (z.B. eine Kundenbestellung).
+  - Optimal für Lese- und Schreiboperationen auf einzelne oder mehrere Zeilen.
+  - Schlecht für Analysen, die sich nur auf bestimmte Spalten fokussieren, da die gesamte Zeile gelesen werden muss, selbst wenn nur einige Spalten benötigt werden.
+
+- Spaltenbasierte Datenbanken:
+  - Vorteilhaft für analytische Abfragen (OLAP), bei denen oft nur bestimmte Spalten abgerufen oder aggregiert werden (z.B. durchschnittliches Alter von Kunden).
+  - Optimal für Abfragen, die nur auf einzelne Spalten zugreifen, da nur die benötigten Spalten gelesen werden müssen.
+  - Schlecht für Schreiboperationen auf einzelne Datensätze, da mehrere Spalten gleichzeitig verändert werden müssen.
+
+3. Komprimierung
+- Spaltenbasierte Datenbanken:
+  - Bieten oft eine bessere Komprimierung, da ähnliche Daten (gleiche Datentypen und Werte) zusammen in einer Spalte gespeichert werden, was Wiederholungsmuster ermöglicht.
+  - Reduziert die Speicherkosten und beschleunigt Leseoperationen.
+
+- Zeilenbasierte Datenbanken:
+  - Weniger effizient in der Komprimierung, da verschiedene Datentypen innerhalb einer Zeile gemischt werden.
+
+Schnelligkeit:
+- Zeilenbasierte Datenbanken (Row-based) sind schneller, wenn:
+  - Häufig ganze Datensätze (Zeilen) gelesen oder geschrieben werden.
+  - Klassische Transaktionen mit vielen Einfügungen, Aktualisierungen und Löschungen durchgeführt werden (z.B. in einer OLTP-Anwendung).
+
+- Spaltenbasierte Datenbanken (Column-based) sind schneller, wenn:
+  - Große Mengen an Daten analysiert werden (z.B. Aggregationen, Summen, Mittelwerte), da nur die relevanten Spalten gelesen werden.
