@@ -1,0 +1,25 @@
+In-Memory-Datenbank
+
+- Was bedeutet es?
+
+				In-Memory-Datenbanken speichern Daten im Arbeitsspeicher (RAM) statt auf Festplatten, 
+				was extrem schnelle Lese- und Schreiboperationen ermöglicht. Sie sind ideal für Anwendungen, 
+				die Echtzeitanalysen und hohe Transaktionsgeschwindigkeiten erfordern, wie in der Finanzdienstleistungsbranche, 
+				im E-Commerce und bei IoT-Anwendungen.
+
+- Welche Vorteile bitete es?
+
+		1.	Hohe Geschwindigkeit:
+				- Extrem schnelle Lese- und Schreiboperationen, da Daten im RAM gespeichert werden, was die Verarbeitungsgeschwindigkeit erheblich steigert.
+		2.	Echtzeitanalysen:
+				- Möglichkeit, komplexe Abfragen und Analysen in Echtzeit durchzuführen, was schnelle Entscheidungsfindung ermöglicht.
+		3.	Flexibilität:
+				- Unterstützung sowohl zeilen- als auch spaltenbasierter Datenorganisation, was die Anpassung an verschiedene Anwendungen erleichtert.
+		4.	Skalierbarkeit:
+				- Viele In-Memory-Datenbanken sind horizontal skalierbar, wodurch sie durch Hinzufügen zusätzlicher Knoten an wachsende Datenmengen angepasst werden können.
+		5.	Einfache Implementierung:
+				- Häufig einfacher zu implementieren und zu verwalten als traditionelle, plattengestützte Datenbanksysteme.
+		6.	Verbesserte Komprimierung:
+				- Optimierte Datenkomprimierung kann den benötigten Speicherplatz im RAM reduzieren und die Effizienz erhöhen.
+		7.	Geringe Latenz:
+				- Minimale Verzögerungen bei Datenabfragen und -verarbeitung, was für Anwendungen mit hohen Leistungsanforderungen vorteilhaft ist.
